@@ -1,6 +1,6 @@
 ﻿var LandingPageController = function ($scope) {
     $scope.models = {
-        helloAngular: 'I work!'
+        helloAngular: 'Asp.net MVC, Angular and stuff!!!'
     };
 }
 

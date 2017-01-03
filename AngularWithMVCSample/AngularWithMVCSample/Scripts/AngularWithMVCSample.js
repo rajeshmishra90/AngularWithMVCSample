@@ -25,6 +25,9 @@ var configFunction = function ($routeProvider) {
         })
         .when('/routeThree', {
             templateUrl: 'routesDemo/three'
+        })
+        .when('/routeOnePartial', {
+            templateUrl: 'routesDemo/OnePartial'
         });
 }
 configFunction.$inject = ['$routeProvider'];

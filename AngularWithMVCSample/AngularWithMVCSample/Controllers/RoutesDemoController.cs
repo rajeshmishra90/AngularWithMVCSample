@@ -13,13 +13,17 @@ namespace AngularWithMVCSample.Controllers
             return View();
         }
 
+        public ActionResult OnePartial()
+        {
+            return PartialView();
+        }
+
         public ActionResult Two(int donuts = 1)
         {
             ViewBag.Donuts = donuts;
             return View();
         }
 
-        [Authorize]
         public ActionResult Three()
         {
             return View();
