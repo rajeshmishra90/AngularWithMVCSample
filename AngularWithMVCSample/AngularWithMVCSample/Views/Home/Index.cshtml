@@ -5,7 +5,10 @@
 </head>
 <body>
     <h1>{{models.helloAngular}}</h1>
-
+    <div class="container">
+        <label>Change The text</label>
+        <input type="text" ng-model="models.helloAngular" placeholder="Test Text" />
+    </div>
     <ul>
         <li><a href="/#/routeOne">Route One</a></li>
         <li><a href="/#/routeOnePartial">Route One Partial</a></li>

@@ -8,6 +8,7 @@ namespace AngularWithMVCSample.Controllers
 {
     public class RoutesDemoController : Controller
     {
+        [OutputCache(Location = System.Web.UI.OutputCacheLocation.Client, Duration = 300)]
         public ActionResult One()
         {
             return View();
@@ -18,12 +19,14 @@ namespace AngularWithMVCSample.Controllers
             return PartialView();
         }
 
+        [OutputCache(Location = System.Web.UI.OutputCacheLocation.Client, VaryByParam = "donuts", Duration = 300)]
         public ActionResult Two(int donuts = 1)
         {
             ViewBag.Donuts = donuts;
             return View();
         }
 
+        [OutputCache(Location = System.Web.UI.OutputCacheLocation.Server, VaryByParam = "donuts", Duration = 300)]
         public ActionResult Three()
         {
             return View();
